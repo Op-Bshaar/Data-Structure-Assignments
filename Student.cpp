@@ -21,3 +21,24 @@ string Student::getName() const
 {
     return name;
 }
+
+ostream& operator<<(ostream& o, const Student& s)
+{
+    o << s.name << '\n' << s.id << '\n' << s.gpa << '\n';
+    return o;
+}
+Student* Student::read(int& size, string path)
+{
+    ifstream f(path);
+    f >> size;
+    Student* students = new Student[size];
+    for (int i = 0; i < size; i++)
+    {
+        string id, name;
+        double gpa;
+        f>> name >> id>> gpa;
+        students[i] = (Student(id, name, gpa));
+    }
+    f.close();
+    return students;
+}
