@@ -9,14 +9,14 @@ int Shell_Sort(T* arr, int Size, function<bool(const T&, const T&)> lessThan)
 	{
 	    for (int i = 0; i+ gap <Size; i++)
 	    {
-		    for (int i = 0; i+ gap <Size; i+=gap)
+		    for (int j = 0; j+ gap <Size; j+=gap)
 		        {
 			        comparisons++;
-			    if (lessThan(arr[i + gap],arr[i]))
+			    if (lessThan(arr[j + gap],arr[j]))
 			    {
-				    T temp = arr[i];
-				    arr[i] = arr[i + gap];
-				    arr[i + gap] = temp;
+				    T temp = arr[j];
+				    arr[j] = arr[j + gap];
+				    arr[j + gap] = temp;
 
 			    }
 		        }
