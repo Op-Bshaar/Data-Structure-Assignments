@@ -16,6 +16,6 @@ Student(string id1, string name1, double gpa1){
     gpa = gpa1;
 }
 };
-bool operator<(const Student& first,const Student& second){
+bool operator<(const string& first,const string& second){
 
 }
