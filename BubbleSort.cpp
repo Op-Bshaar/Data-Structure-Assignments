@@ -14,11 +14,11 @@ void Bubble_Sort(T* arr, int Size)
 template <typename T>
 void Bubble_Sort(T* arr, int Size, function<bool(const T&, const T&)> lessThan)
 {
-	for (int i = Size;i >=0;i--)
+	for (int i = Size; i >= 0; i--)
 	{
 		for (int j = 1; j < i; j++)
 		{
-			if (!lessThan(arr[j - 1], arr[j]))
+			if (lessThan(arr[j], arr[j - 1]))
 			{
 				T temp = arr[j - 1];
 				arr[j - 1] = arr[j];

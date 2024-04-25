@@ -42,7 +42,7 @@ void merge(T*arr,int begin, int mid,int end, function<bool(const T&, const T&)> 
 	int ileft = 0, iright = 0, i = begin;
 	while (ileft < lsize && iright < rsize)
 	{
-		if (!lessThan(left[ileft],right[iright]))
+		if (lessThan(right[iright], left[ileft]))
 		{
 			arr[i] = right[iright];
 			iright++;
