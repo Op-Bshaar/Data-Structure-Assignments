@@ -10,7 +10,7 @@ void Shell_Sort(T* arr, int Size, function<bool(const T&, const T&)> lessThan)
 		{
 			if (arr[i] < arr[i - gap])
 			{
-				int temp = arr[i];
+				T temp = arr[i];
 				arr[i] = arr[i - gap];
 				arr[i - gap] = temp;
 
