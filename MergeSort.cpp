@@ -2,31 +2,32 @@
 using namespace std;
 
 template <typename T>
-void mergeSort(T* arr,int size)
+int mergeSort(T* arr,int size)
 {
 	function<bool(const T&, const T&)> lessThan = [](const T& t1, const T& t2)->bool { return (t1 < t2); };
-		mergeSort(arr, size, lessThan);
+	return mergeSort(arr, size, lessThan);
 }
 template <typename T>
-void mergeSort(T* arr,int size, function<bool(const T&,const T&)> lessThan)
+int mergeSort(T* arr,int size, function<bool(const T&,const T&)> lessThan)
 {
-	mergeSort(arr, 0, size - 1, lessThan);
+	return mergeSort(arr, 0, size - 1, lessThan);
 }
 template <typename T>
-void mergeSort(T* arr,int begin, int end,function<bool(const T&, const T&)> lessThan)
+int mergeSort(T* arr,int begin, int end,function<bool(const T&, const T&)> lessThan)
 {
 	if (begin >= end)
 	{
-		return;
+		return 0;
 	}
 	int mid = begin + (end - begin) / 2;
-	mergeSort(arr, begin, mid,lessThan);
-	mergeSort(arr, mid + 1, end, lessThan);
-	merge(arr, begin, mid, end, lessThan);
+	return mergeSort(arr, begin, mid,lessThan) + 
+		mergeSort(arr, mid + 1, end, lessThan) + 
+		merge(arr, begin, mid, end, lessThan);
 }
 template <typename T>
-void merge(T*arr,int begin, int mid,int end, function<bool(const T&, const T&)> lessThan)
+int merge(T*arr,int begin, int mid,int end, function<bool(const T&, const T&)> lessThan)
 {
+	int comparisons = 0;
 	int lsize = mid - begin + 1;
 	int rsize = end - mid;
 	T* left = new T[lsize];
@@ -53,6 +54,7 @@ void merge(T*arr,int begin, int mid,int end, function<bool(const T&, const T&)> 
 			ileft++;
 		}
 		i++;
+		comparisons++;
 	}
 	for (;ileft < lsize; ileft++,i++)
 	{
@@ -64,4 +66,5 @@ void merge(T*arr,int begin, int mid,int end, function<bool(const T&, const T&)> 
 	}
 	delete[] left;
 	delete[] right;
+	return comparisons;
 }

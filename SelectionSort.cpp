@@ -1,14 +1,15 @@
 #include <functional>
 using namespace std;
 template <typename T>
-void selectionSort(T* arr, int size)
+int selectionSort(T* arr, int size)
 {
 	function<bool(const T&, const T&)> lessThan = [](const T& t1, const T& t2)->bool { return (t1 < t2); };
-	selectionSort(arr, size, lessThan);
+	return selectionSort(arr, size, lessThan);
 }
 template <typename T>
-void selectionSort(T* arr, int size, function<bool(const T&, const T&)> lessThan)
+int selectionSort(T* arr, int size, function<bool(const T&, const T&)> lessThan)
 {
+	int comparisons = 0;
 	for (int i = 0; i < size; i++)
 	{
 		int min = i;
@@ -18,7 +19,9 @@ void selectionSort(T* arr, int size, function<bool(const T&, const T&)> lessThan
 			{
 				min = j;
 			}
+			comparisons++;
 		}
 		swap(arr[i], arr[min]);
 	}
+	return comparisons;
 }
