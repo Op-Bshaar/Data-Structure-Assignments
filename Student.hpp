@@ -3,7 +3,6 @@
 
 #include <string>
 #include <fstream>
-#include <vector>
 using namespace std;
 
 class Student{
@@ -16,7 +15,7 @@ public:
 double getGpa() const;
 string getName() const;
 Student(string id1, string name1, double gpa1);
-static vector<Student> read(string path = "students.txt");
+static Student* read(int& size, string path = "students.txt");
 bool operator<(const Student& other) const;
 friend ostream& operator<<(ostream& o, const Student& s);
 };

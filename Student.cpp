@@ -27,18 +27,17 @@ ostream& operator<<(ostream& o, const Student& s)
     o << s.name << '\n' << s.id << '\n' << s.gpa << '\n';
     return o;
 }
-vector<Student> Student::read(string path)
+Student* Student::read(int& size, string path)
 {
-    vector<Student> students;
     ifstream f(path);
-    int count;
-    f >> count;
-    for (int i = 0; i < count; i++)
+    f >> size;
+    Student* students = new Student[size];
+    for (int i = 0; i < size; i++)
     {
         string id, name;
         double gpa;
         f >> name >> id >> gpa;
-        students.push_back(Student(id, name, gpa));
+        students[i] = (Student(id, name, gpa));
     }
     return students;
 }
