@@ -36,8 +36,9 @@ Student* Student::read(int& size, string path)
     {
         string id, name;
         double gpa;
-        f >> name >> id >> gpa;
+        f>> name >> id>> gpa;
         students[i] = (Student(id, name, gpa));
     }
+    f.close();
     return students;
 }
