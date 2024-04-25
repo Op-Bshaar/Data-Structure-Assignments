@@ -1,6 +1,9 @@
 #include <iostream>
 #include <functional>
 using namespace std;
+
+//function<bool(const Student&, const Student&)> byGpa = [](const Student& s1, const Student& s2) {return s1.getGpa() < s2.getGpa(); };
+//Bubble_Sort(students, size,byGpa);
 template <typename T>
 void Bubble_Sort(T* arr, int Size)
 {
