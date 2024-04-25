@@ -11,10 +11,10 @@ int Shell_Sort(T* arr, int Size, function<bool(const T&, const T&)> lessThan)
 	    {
 		    for (int j = 0; j+ gap <Size; j+=gap)
 		        {
-			        
+			    comparisons++;
 			    if (lessThan(arr[j + gap],arr[j]))
 			    {
-				    comparisons++;
+				    
 				    T temp = arr[j];
 				    arr[j] = arr[j + gap];
 				    arr[j + gap] = temp;
