@@ -11,6 +11,7 @@
 #include "QuickSort.cpp"
 #include "SelectionSort.cpp"
 #include "ShellSort.cpp"
+#include "InsertSort.cpp"
 typedef function<bool(const Student&, const Student&)> comparerType;
 using namespace std;
 void sort(string name, function<int(Student*,int, comparerType)> sorter, comparerType comparer,ostream& output)
@@ -31,6 +32,7 @@ void sort(string name, function<int(Student*,int, comparerType)> sorter, compare
 }
 void getOutput(comparerType comparer, ostream& out)
 {
+    sort("Insertion Sort", [](Student* st, int size, comparerType c) {return Insert_Sort(st, size, c); }, comparer, out);
 	sort("Selection Sort", [](Student* st, int size, comparerType c) {return selectionSort(st, size, c); }, comparer, out);
 	sort("Bubble Sort", [](Student* st, int size, comparerType c) {return Bubble_Sort(st, size, c); }, comparer, out);
 	sort("Shell Sort", [](Student* st, int size, comparerType c) {return Shell_Sort(st, size, c); }, comparer, out);
