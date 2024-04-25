@@ -1,5 +1,6 @@
 #include "Student.hpp"
-
+#include<iostream>
+using namespace std;
 Student::Student(){//default constructor
     id = "", name="";
     gpa = 0.0;
@@ -34,10 +35,10 @@ Student* Student::read(int& size, string path)
     Student* students = new Student[size];
     for (int i = 0; i < size; i++)
     {
-        string id, name;
+        string name, id;
         double gpa;
-        f>> name >> id>> gpa;
-        students[i] = (Student(id, name, gpa));
+        f >> name >> id >> gpa;
+        students[i] = Student(id, name, gpa);
     }
     f.close();
     return students;
