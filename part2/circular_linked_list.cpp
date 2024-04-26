@@ -436,4 +436,68 @@ void c_linked_list<T>::replaceAt(T newElement, int index)
  * @secondItemIdx: the secand node 
  * @Return: no return value
  */
+template <typename T>
+void c_linked_list<T>::swap(int firstItemIdx, int secondItemIdx)
+{
+    if (firstItemIdx < 0 || secondItemIdx < 0 || firstItemIdx >= this->Size || secondItemIdx >= this->Size)
+    {
+        std::cout << "Out of the range\n";
+        return;
+    }
+
+    if (firstItemIdx == secondItemIdx)
+        return;
+
+    node *it1 = Head;
+    node *it2 = Head;
+    node *prev1 = NULL;
+    node *prev2 = NULL;
+
+    // Find the nodes to be swapped and their previous nodes
+    for (int i = 0; i < firstItemIdx; ++i)
+    {
+        prev1 = it1;
+        it1 = it1->next;
+    }
+
+    for (int i = 0; i < secondItemIdx; ++i)
+    {
+        prev2 = it2;
+        it2 = it2->next;
+    }
+
+    // Update the pointers
+    if (prev1)
+        prev1->next = it2;
+    else
+	{
+        this->Head = it2;
+		this->Tail->next = this->Head;
+	}
+
+    if (prev2)
+        prev2->next = it1;
+    else
+	{
+        this->Head = it1;
+		this->Tail->next = this->Head;
+	}
+
+    node *temp = it1->next;
+    it1->next = it2->next;
+    it2->next = temp;
+
+    // Update the Tail pointer if necessary
+    if (firstItemIdx == this->Size - 1)
+	{
+        this->Tail = it2;
+		this->Tail->next = this->Head;
+	}
+    else if (secondItemIdx == this->Size - 1)
+	{
+		this->Tail = it1;
+		this->Tail->next = this->Head;
+	}
+        
+}
 

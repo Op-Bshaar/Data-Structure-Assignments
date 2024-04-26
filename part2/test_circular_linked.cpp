@@ -143,6 +143,43 @@ int main(void)
 	cout << "_____________________________________\n";
 	cout << "_____________________________________\n";
 	cout << "_____________________________________\n";
+	cout << "_____________________________________\n";
+	cout << "_____________________________________\n";
+	cout << "_____________________________________\n";
+
+	cout << "test swap\n";
+	cout << "frist case :: out of the range\n";
+	list.swap (-1,7);
+	list.swap(0,7);
+	list.swap(7,0);
+	list.print();
+	
+	cout << " the size = " << list.linkedListSize() << "\n";
+	cout << "_____________________________________\n";
+	cout <<"case :: tail and head\n";
+	list.swap(3,0);
+	list.print();
+	cout << " the size = " << list.linkedListSize() << "\n";
+	cout << "_____________________________________\n";
+	
+	cout <<"case :: head and tail\n";
+	list.swap(3,0);
+	list.print();
+	cout << " the size = " << list.linkedListSize() << "\n";
+	cout << "_____________________________________\n";
+	
+	cout <<"case :: Head and node\n";
+	list.swap(0,2);
+	list.print();
+	
+	cout << " the size = " << list.linkedListSize() << "\n";
+	cout << "_____________________________________\n";
+	
+	cout <<"case :: tail and node\n";
+	list.swap(3,2);
+	list.print();
+	cout << " the size = " << list.linkedListSize() << "\n";
+	cout << "_____________________________________\n";
 	
 	list.clear();
 }
