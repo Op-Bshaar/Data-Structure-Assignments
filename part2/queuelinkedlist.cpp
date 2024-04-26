@@ -16,7 +16,7 @@ public:
 linkedQueue(){
        frontPtr = NULL;
        rearPtr = NULL;
-       rearPtr = 0; 
+       length = 0; 
     }
 	bool isEmpty(){
 		return (length == 0);
