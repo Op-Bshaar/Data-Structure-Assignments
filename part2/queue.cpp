@@ -9,7 +9,7 @@ class arrayQueue{
     int *arr;
 public:    
     arrayQueue(int size){
-        if(maxzise<size) size = 200;
+        if(size<=0) maxzise = 200;
         else maxzise = size;
         length = 0;
         front = 0;
@@ -48,11 +48,24 @@ public:
     void printQueue(){
         if(!isEmpty()){
             for(int i = front;i!=rear;i = (i+1)%maxzise){
-                cout<<arr[i];
+                cout << arr[i];
             }
-            cout<<arr[rear];
+            cout << arr[rear] << endl;
+        } else{
+          cout << "queue is empty!!" << endl;
         }
      }
+    void dequeue(){
+		if (isEmpty()){
+			cout << " Can't Dequeue ...!";
+		}
+		else
+		{
+			front = (front + 1) % maxzise;
+			--length;
+
+		}
+	}
 };
 
 int main(){
@@ -61,5 +74,10 @@ int main(){
   he.enqueue(3);
   he.enqueue(4);
   he.enqueue(5);
+  he.printQueue();
+  he.dequeue();
+  he.dequeue();
+  he.dequeue();
+  he.dequeue();
   he.printQueue();
 }
