@@ -48,9 +48,11 @@ public:
     void printQueue(){
         if(!isEmpty()){
             for(int i = front;i!=rear;i = (i+1)%maxzise){
-                cout<<arr[i];
+                cout << arr[i];
             }
-            cout<<arr[rear];
+            cout << arr[rear] << endl;
+        } else{
+          cout << "queue is empty!!" << endl;
         }
      }
     void dequeue(){
@@ -72,6 +74,10 @@ int main(){
   he.enqueue(3);
   he.enqueue(4);
   he.enqueue(5);
-  he.deleteQueue();
+  he.printQueue();
+  he.dequeue();
+  he.dequeue();
+  he.dequeue();
+  he.dequeue();
   he.printQueue();
 }
