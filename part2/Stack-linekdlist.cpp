@@ -54,6 +54,8 @@ public:
     }
     void print() {
         Node* current = top;
+        if(current == nullptr)
+            cout << "Empty!!";
         while (current != nullptr) {
             cout << current->item << " ";
             current = current->next;
@@ -67,7 +69,7 @@ int main() {
     s.push(20);
     s.push(30);
     s.print();
-    s.clear();
+    s.pop();
     s.print();
     return 0;
 }

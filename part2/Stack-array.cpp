@@ -30,9 +30,9 @@ public:
     void getTop(){
 		
 		if (isEmpty())
-			cout << "stack empty on getTop";
+			cout << "Stack is Empty!!" << '\n';
 		else {
-			cout<<"the top is" <<arr[top]<<endl;
+			cout<<"the top is " <<arr[top] << '\n';
 	}
 	
 	}
@@ -51,10 +51,14 @@ public:
     }
 
     void print(){
-        for(int i = top;i>=0;i--){
-            cout<<arr[i];
+        if(isEmpty()){
+            cout << "Empty!!";
+        } else{
+            for(int i = top;i>=0;i--){
+                cout<<arr[i] << " ";
+            }
         }
-        
+        cout << '\n';
     }
 };
 int main(){
@@ -62,6 +66,10 @@ int main(){
   stackee.push(2);
   stackee.push(3);
   stackee.push(4);
+  stackee.print();
+  stackee.getTop();
+  stackee.pop();
+  stackee.pop();
   stackee.pop();
   stackee.print();
 }
