@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/aymnz/OneDrive/Documents/Data-Structure-Assignments",
-      "program": "c:/Users/aymnz/OneDrive/Documents/Data-Structure-Assignments/build/Debug/outDebug",
+      "cwd": "c:/Users/aymnz/OneDrive/Documents/Data-Structure-Assignments/part2",
+      "program": "c:/Users/aymnz/OneDrive/Documents/Data-Structure-Assignments/part2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
