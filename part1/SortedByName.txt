@@ -1,90 +1,90 @@
 Algorithm: Insertion Sort
 Number of comparisons: 3
 Running Time: 4 microseconds
-3.1
 Ali
 3541
-3.5
+3.1
 Mariam
 69712
 3.7
-Mohamed
-0
-Sara
-Ahmed
+Mohamed Kamal
+97848
+2.2
+Sara Ahmed
 78697
+3.1
 Algorithm: Selection Sort
 Number of comparisons: 6
 Running Time: 2 microseconds
-3.1
 Ali
 3541
-3.5
+3.1
 Mariam
 69712
 3.7
-Mohamed
-0
-Sara
-Ahmed
+Mohamed Kamal
+97848
+2.2
+Sara Ahmed
 78697
+3.1
 Algorithm: Bubble Sort
 Number of comparisons: 6
 Running Time: 1 microseconds
-3.1
 Ali
 3541
-3.5
+3.1
 Mariam
 69712
 3.7
-Mohamed
-0
-Sara
-Ahmed
+Mohamed Kamal
+97848
+2.2
+Sara Ahmed
 78697
+3.1
 Algorithm: Shell Sort
 Number of comparisons: 11
 Running Time: 2 microseconds
-3.1
 Ali
 3541
-3.5
+3.1
 Mariam
 69712
 3.7
-Mohamed
-0
-Sara
-Ahmed
+Mohamed Kamal
+97848
+2.2
+Sara Ahmed
 78697
+3.1
 Algorithm: Merge Sort
 Number of comparisons: 5
 Running Time: 4 microseconds
-3.1
 Ali
 3541
-3.5
+3.1
 Mariam
 69712
 3.7
-Mohamed
-0
-Sara
-Ahmed
+Mohamed Kamal
+97848
+2.2
+Sara Ahmed
 78697
+3.1
 Algorithm: Quick Sort
 Number of comparisons: 9
 Running Time: 3 microseconds
-3.1
 Ali
 3541
-3.5
+3.1
 Mariam
 69712
 3.7
-Mohamed
-0
-Sara
-Ahmed
+Mohamed Kamal
+97848
+2.2
+Sara Ahmed
 78697
+3.1
