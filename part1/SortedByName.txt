@@ -1,9 +1,12 @@
 Algorithm: Insertion Sort
-Number of comparisons: 3
-Running Time: 4 microseconds
+Number of comparisons: 6
+Running Time: 5 microseconds
 Ali
 3541
 3.1
+Ali Mohamed Omer
+35678
+3.4
 Mariam
 69712
 3.7
@@ -14,11 +17,14 @@ Sara Ahmed
 78697
 3.1
 Algorithm: Selection Sort
-Number of comparisons: 6
-Running Time: 2 microseconds
+Number of comparisons: 10
+Running Time: 3 microseconds
 Ali
 3541
 3.1
+Ali Mohamed Omer
+35678
+3.4
 Mariam
 69712
 3.7
@@ -29,11 +35,14 @@ Sara Ahmed
 78697
 3.1
 Algorithm: Bubble Sort
-Number of comparisons: 6
-Running Time: 1 microseconds
+Number of comparisons: 10
+Running Time: 4 microseconds
 Ali
 3541
 3.1
+Ali Mohamed Omer
+35678
+3.4
 Mariam
 69712
 3.7
@@ -44,11 +53,14 @@ Sara Ahmed
 78697
 3.1
 Algorithm: Shell Sort
-Number of comparisons: 11
-Running Time: 2 microseconds
+Number of comparisons: 22
+Running Time: 7 microseconds
 Ali
 3541
 3.1
+Ali Mohamed Omer
+35678
+3.4
 Mariam
 69712
 3.7
@@ -59,11 +71,14 @@ Sara Ahmed
 78697
 3.1
 Algorithm: Merge Sort
-Number of comparisons: 5
-Running Time: 4 microseconds
+Number of comparisons: 8
+Running Time: 11 microseconds
 Ali
 3541
 3.1
+Ali Mohamed Omer
+35678
+3.4
 Mariam
 69712
 3.7
@@ -74,11 +89,14 @@ Sara Ahmed
 78697
 3.1
 Algorithm: Quick Sort
-Number of comparisons: 9
-Running Time: 3 microseconds
+Number of comparisons: 11
+Running Time: 10 microseconds
 Ali
 3541
 3.1
+Ali Mohamed Omer
+35678
+3.4
 Mariam
 69712
 3.7
