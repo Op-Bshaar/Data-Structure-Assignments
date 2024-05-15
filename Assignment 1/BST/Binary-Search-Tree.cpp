@@ -12,10 +12,6 @@ public class node
 		this.right = right;
 		this.Item = thing;
 	}
-	T GetItem()
-	{
-		return Item;
-	}
 };
 public class BinarySearchTree
 {
