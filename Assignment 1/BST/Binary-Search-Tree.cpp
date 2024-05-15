@@ -2,33 +2,78 @@
 #include <functional>
 using namespace std;
 template <typename T>
-public class node
+class node
 {
-	private node* right;
-	private node* left;
-	private T Item
-		Node(T thing, node* Right)
+public:
+	node* Right;
+	node* Left;
+	T Item;
+		node(T thing=NULL, node* right=nullptr,node* left=nullptr)
 	{
-		this.right = right;
-		this.Item = thing;
+		this->Right = right;
+		this->Left = left;
+		this->Item = thing;
 	}
-};
-public class BinarySearchTree
-{
-	private node Root;
-	private node Current;
-	BinarySearchTree(node start)
-	{
-		this.Root = start;
-	}
-	Push(node Node)
-	{
-	while(Node->next!=NULL)
-	{
+}
+;
 
-		current = Node->next;
+template <typename T>
+class BinarySearchTree
+{
+	private node<T>* Root;
+	private node<T>* Current;
+	private node<T>* Next;
+public:
+	int side;
+	BinarySearchTree(node<T>* start)
+	{
+		this->Root = start;
+	}BinarySearchTree()
+	{
+		this.Root = new node();
 	}
+	void Push(node<T>* Node)
+	{
+		push(Root, Node);
+	}
+	void Push(node<T>* NodeLoc, node<T> Node)
+	{
+		
+		while (Next != NULL)
+		{
+			Current = NodeLoc;
+			Next = Current;
+			if (Node.Item < Next->Item)
+			{
+				side = 0;
+				Push(Next->Left, Node);
+			}
+			else if(Node.Item>Next->Item)
+			{
+				side = 1;
+				Push(Next->Right, Node);
+			}
+			current = Next;
+			
+			
+		}
+		switch (side)
+		{
+		case 0:
+			Current->Left = Next;
+			break;
+		case 1:
+			Current->Right = Next;
+			break;
+		}
 
 	}
 }
 ;
+int main()
+{
+	node<int> Root(1);
+	node<int> ne(2);
+	BinarySearchTree<int> BST(&Root);
+	return 0;
+}
