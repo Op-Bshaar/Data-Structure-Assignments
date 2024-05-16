@@ -20,9 +20,10 @@ public:
 template <typename T>
 class BinarySearchTree
 {
-	private node<T>* Root;
-	private node<T>* Current;
-	private node<T>* Next;
+private:
+	node<T>* Root;
+	node<T>* Current;
+	node<T>* Next;
 public:
 	int side;
 	BinarySearchTree(node<T>* start)
@@ -30,7 +31,7 @@ public:
 		this->Root = start;
 	}BinarySearchTree()
 	{
-		this.Root = new node();
+		this->Root = new node<T>();
 	}
 	void Push(node<T>* Node)
 	{
@@ -53,7 +54,7 @@ public:
 				side = 1;
 				Push(Next->Right, Node);
 			}
-			current = Next;
+			Current = Next;
 			
 			
 		}
@@ -68,8 +69,7 @@ public:
 		}
 
 	}
-}
-;
+};
 int main()
 {
 	node<int> Root(1);
